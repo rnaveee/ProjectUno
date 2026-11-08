@@ -1,0 +1,83 @@
+- made by Ryan Nave
+
+1. make sure you guys have git installed:
+
+run this in powershell:
+git --version
+gh --version
+
+if you dont have it installed, run this in powershell:
+winget install --id Git.Git -e
+winget install --id GitHub.cli -e
+
+this installs git and github
+
+2. sign into git in your terminal
+
+run this in terminal:
+gh auth login
+
+then:
+git config --global user.name "Your Name"
+git config --global user.email "you@example.com"
+(btw i invited you guys with your sfu emails so you guys can use that)
+
+3. download the repo onto your computer
+
+run this in terminal:
+cd (file path where you want your project files to be)
+git clone https://github.com/rnaveee/ProjectUno.git
+cd ProjectUno
+
+------------------------------------------------------------------------------------------------
+
+these commands are how to use git whenever you're working
+
+---------Switching branches----------------------------------------------------------------
+git checkout (branch)           -> this switches the branch
+ex.
+git checkout main               -> switches your branch to main (where our main code is)
+
+git pull
+-> gets the latest code on that branch
+
+
+---------Working on the project----------------------------------------------------------------
+git checkout -b yourname/feature       -> this switches/creates a new branch on whatever your working on
+ex.
+git checkout -b rnaveee/creating-card-class
+
+-> then work on your code
+-> after you're done coding or want to save it to the branch:
+
+git status                  -> shows you the files you changed
+git add filename            -> add the file you changed to your branch
+ex.
+git add Card.h
+
+git add .                   -> add all the files you changed
+
+-> then run this to commit it to your branch
+
+git commit -m "Message on what you changed"
+ex.
+git commit -m "Added card header files"
+
+-> then push everything onto your branch
+git push -u origin HEAD     -> pushes everything to your branch
+or
+git push -u origin yourname/short-description     -> pushes everything to your branch (does the same thing)
+
+-> then make a pull request for me to review and put it into main
+gh pr create --fill         -> makes a pull request
+
+--- Rules (i js generated this from chatgpt) ---
+Always run git pull before you start working.
+Never work directly on main. Always make a branch.
+Commit small and often, with messages that say what you did.
+Tell the team what you’re working on, so two people don’t edit the same file at once.
+Never commit passwords, API keys, or huge files.
+
+if yall ever get any bugs or confused or something just post it in chatgpt or ask the gc
+
+

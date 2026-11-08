@@ -25,9 +25,12 @@ git config --global user.email "you@example.com"
 3. download the repo onto your computer
 
 run this in terminal:
-cd (file path where you want your project files to be)
-git clone https://github.com/rnaveee/ProjectUno.git
-cd ProjectUno
+
+cd (file path)          -> where you want the project to be in your folders
+git clone https://github.com/rnaveee/ProjectUno.git     -> clone the repo
+cd ProjectUno           -> change your directory to the project
+git checkout main       -> switch your work to main
+git pull                -> pull whatever main has
 
 ------------------------------------------------------------------------------------------------
 

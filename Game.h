@@ -1,8 +1,8 @@
 #ifndef GAME_H
 #define GAME_H
 
-#include "Card.h"
-#include "Deck.h"
+#include "UnoCard.h"
+#include "UnoDeck.h"
 #include "Player.h"
 #include "UserInterface.h"
 

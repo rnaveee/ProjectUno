@@ -33,9 +33,11 @@ public:
     // Postcondition: Returns the current number of cards in the deck.
 
 
-    Card viewTopCard();
+    Card viewTopCard() const;                      
     // Precondition: The deck is not empty.
     // Postcondition: Returns the top card of the deck without removing it.
+    // The deck is not modified.
+
     Card drawTopCard();
     // Precondition: The deck is not empty.
     // Postcondition: Removes the top card from the deck and returns it.
@@ -68,10 +70,11 @@ public:
 
 
     Deck& operator=(const Deck& d);
-    // Precondition: d is a valid Deck object and is not the same object
-    // as the destination deck.
-    // Postcondition: The destination deck becomes a deep copy of d.
-    // Any existing cards in the destination deck are properly released.
+    // Precondition: d is a valid Deck object.                           
+    // Postcondition: If d is the same object as the destination deck,
+    // nothing changes. Otherwise, any existing cards in the destination
+    // deck are released and the destination deck becomes a deep copy of d.
+    // Returns a reference to the destination deck.                       
 };
 
 #endif

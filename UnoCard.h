@@ -39,7 +39,11 @@ public:
 
     // to check if the current playing card is a valid card to place on top of the pile
     // pre condition: topCard is a valid object representing the top card of the card pile
-    // post condition: returns true if a card matches the color, type, number, or if it is a wild card
+    // post condition: returns true if this card is a Wild or Wild Draw Four, or if it has
+    // the same color as topCard, or if both cards are NUMBER cards with the same number,
+    // or if both cards are the same action type (Skip, Reverse, Draw Two).
+    // Two NUMBER cards with different colors and different numbers do NOT match.
+    // The cards are not modified.                                          // NEW
     bool isValid(const Card& topCard) const;
 
     // overloading insertion operator for printing out card's detail
